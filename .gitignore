@@ -1,6 +1,6 @@
 build/content_script.js
 build/event.js
-build/poopup.js
+build/popup.js
 build/*.eot
 build/*.woff2
 build/*.ttf
