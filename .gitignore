@@ -1,0 +1,8 @@
+build/content_script.js
+build/event.js
+build/poopup.js
+build/*.eot
+build/*.woff2
+build/*.ttf
+build/*.svg
+build/*.woff

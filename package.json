@@ -1,0 +1,50 @@
+{
+  "name": "share-quotes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "config": {
+    "version": "1.0.2"
+  },
+  "scripts": {
+    "build-content-script": "NODE_ENV=production webpack --config webpack/config.content_script.js",
+    "build-event": "cp app/event.js build/event.js",
+    "build-popup": "NODE_ENV=production webpack --config webpack/config.popup.js",
+    "build": " npm run build-content-script && npm run build-popup && npm run build-event && npm run alert-end",
+    "dev": "NODE_ENV=development webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base build",
+    "alert-end": "terminal-notifier -message 'Build is finished' >/dev/null 2>&1 || echo 'Build is finished'",
+    "release": "cd build;zip -r ../releases/$npm_package_config_version.zip *"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "font-awesome": "^4.5.0",
+    "immutable": "^3.7.6",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.6.1",
+    "material-ui": "^0.14.4",
+    "qs": "^6.1.0",
+    "quote-parser": "^0.1.3",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-fontawesome": "^0.3.3",
+    "react-hot-loader": "^1.3.0",
+    "react-tap-event-plugin": "^0.2.2",
+    "redux": "^3.3.1",
+    "webpack": "^1.12.14"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
