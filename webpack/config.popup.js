@@ -1,13 +1,14 @@
-var path = require('path');
-var webpack = require('webpack');
-var baseConfig = require('./_config.base');
+const path = require('path');
+const webpack = require('webpack');
+const baseConfig = require('./_config.base');
+const APP_DIR = path.join(__dirname, '..', 'app');
 
-var definePlugin = new webpack.DefinePlugin({
+const definePlugin = new webpack.DefinePlugin({
   'process.env.NODE_ENV': '"production"',
   ENV: process.env.ENV || JSON.stringify('production')
 });
 
-baseConfig.entry = [path.join(__dirname, '..', 'app') + '/popup.jsx'];
+baseConfig.entry = [`${APP_DIR}/popup.jsx`];
 
 baseConfig.output = {
   path: path.join(__dirname, '..', 'build'),
