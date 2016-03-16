@@ -44,7 +44,7 @@ class Footer extends React.Component {
   }
   render() {
     return (
-      <div>
+      <footer>
         <div style={this.state.styles.div}>
           <a style={this.state.styles.a} target="_blank" href={twitterUrl}>
             <FontAwesome style={this.state.styles.FontAwesome} name="twitter" />
@@ -55,8 +55,8 @@ class Footer extends React.Component {
             <span style={this.state.styles.span}>Side projects</span>
           </a>
         </div>
-        <div style={this.state.styles.thanks}>and a lot of thanks to <a target="_blank" style={this.state.styles.thanks} href="https://github.com/Mitica/quote-parser-js">Mitica</a> for his awesome quote extractor library</div>
-      </div>
+        <div style={this.state.styles.thanks}>and a lot of thanks to <a target="_blank" style={this.state.styles.thanks_a} href="https://github.com/Mitica/quote-parser-js">Mitica</a> for his awesome quote extractor library</div>
+      </footer>
     );
   }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import QuoteBox from './QuoteBox.jsx';
 import QuoteParser from '../lib/quote-parser.js';
-require('font-awesome/css/font-awesome.css');
+import 'font-awesome/css/font-awesome.css';
 
 const env = process.env.NODE_ENV || 'development';
 

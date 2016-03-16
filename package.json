@@ -10,7 +10,7 @@
     "build-content-script": "NODE_ENV=production webpack --config webpack/config.content_script.js",
     "build-event": "cp app/event.js build/event.js",
     "build-popup": "NODE_ENV=production webpack --config webpack/config.popup.js",
-    "build": " npm run build-content-script && npm run build-popup && npm run build-event && npm run alert-end",
+    "build": "npm run build-content-script && npm run build-popup && npm run build-event && npm run alert-end",
     "dev": "open http://localhost:8080/popup.html && NODE_ENV=development webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base build",
     "alert-end": "terminal-notifier -message 'Build is finished' >/dev/null 2>&1 || echo 'Build is finished'",
     "release": "cd build;zip -r ../releases/$npm_package_config_version.zip *"
