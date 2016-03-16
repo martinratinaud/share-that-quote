@@ -3,31 +3,27 @@ import AppBar from 'material-ui/lib/app-bar';
 import QuoteList from './QuoteList.jsx';
 import Footer from './Footer.jsx';
 
-const QuoteBox = React.createClass({
-  propTypes: {
-    quotes: React.PropTypes.array
-  },
+class QuoteBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { data: this.props.quotes };
+  }
 
-  getInitialState: function() {
-    return {data: []};
-  },
-
-  componentDidMount: function() {
-    this.setState({
-      data: this.props.quotes
-    });
-  },
-
-  render: function() {
+  render() {
     return (
       <div className="quoteBox">
         <AppBar title="Quotes"
-                showMenuIconButton={false}/>
-        <QuoteList data={this.state.data} />
+          showMenuIconButton={false}
+        />
+      <QuoteList quotes={ this.state.data } />
         <Footer />
       </div>
     );
   }
-});
+}
+
+QuoteBox.propTypes = {
+  quotes: React.PropTypes.array
+};
 
 export default QuoteBox;
