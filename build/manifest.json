@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Share That Quote",
     "description": "An extension to easily share quotes found in current page",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": "@martinratinaud",
 
     "background": {
