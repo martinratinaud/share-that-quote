@@ -21,6 +21,7 @@ class Quote extends React.Component {
     super(props);
     this._handleClick = this._handleClick.bind(this);
     this._handleShare = this._handleShare.bind(this);
+    this._handleSearchAuthor = this._handleSearchAuthor.bind(this);
   }
   _handleClick() {
     if (!chrome.tabs) {
@@ -34,6 +35,9 @@ class Quote extends React.Component {
   _handleShare() {
     window.open(this.props['pablo-url']);
   }
+  _handleSearchAuthor() {
+    window.open(this.props['search-author-url']);
+  }
   render() {
     return (
       <ListItem
@@ -41,7 +45,7 @@ class Quote extends React.Component {
         secondaryText={this.props.author}
         onClick={this._handleClick}
         leftAvatar={
-          <Avatar src={this.props['avatar-url']} />
+          <Avatar src={this.props['avatar-url']} onClick={this._handleSearchAuthor} />
         }
         rightIconButton={
           <IconButton
@@ -60,6 +64,7 @@ class Quote extends React.Component {
 Quote.propTypes = {
   'pablo-url': React.PropTypes.string,
   'avatar-url': React.PropTypes.string,
+  'search-author-url': React.PropTypes.string,
   author: React.PropTypes.string,
   children: React.PropTypes.string
 };

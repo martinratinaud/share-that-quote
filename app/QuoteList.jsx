@@ -30,6 +30,7 @@ class QuoteList extends React.Component {
           url={ quote.pabloUrl }
           pablo-url={ quote.pabloUrl }
           avatar-url={ quote.avatarUrl }
+          search-author-url={ quote.searchAuthorUrl }
         >
           {quote.text}
         </Quote>
