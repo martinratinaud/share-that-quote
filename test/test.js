@@ -87,6 +87,17 @@ fbq('track', "PageView");
 </head>
 
 <body class="blog paged custom-background paged-3 mp6 customizer-styles-applied group-blog highlander-enabled highlander-light infinite-scroll neverending">
+
+<p>“I teach people how to sell their books online. The less code they
+      need the better. Zapier eliminates the need for code.”</p>
+      <cite>—Paul Jarvis, <span>Web Designer &amp; Author<span></span></span></cite>
+
+<div class="quoteText">
+      &ldquo;I believe that everything happens for a reason. People change so that you can learn to let go, things go wrong so that you appreciate them when they're right, you believe lies so you eventually learn to trust no one but yourself, and sometimes good things fall apart so better things can fall together.&rdquo;
+  <br>  &#8213;
+    <a class="authorOrTitle" href="/author/show/82952.Marilyn_Monroe">Marilyn Monroe</a>
+</div>
+
 <div id="page" class="hfeed site">
       <header id="masthead" class="site-header" role="banner">
 
