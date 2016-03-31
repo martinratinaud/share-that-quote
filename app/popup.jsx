@@ -19,7 +19,7 @@ function onPageDetailsReceived(pageDetails) {
 }
 
 if (env === 'development') {
-  const quotes = QuoteParser.extractQuotes(require('../test/test.js'));
+  const quotes = QuoteParser.extractQuotes(require('../test/html-page.js'));
 
   onPageDetailsReceived({ quotes });
 } else {
