@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const baseConfig = require('./_config.base');
-const APP_DIR = path.join(__dirname, '..', 'app');
+const APP_DIR = path.join(__dirname, '..', 'src/app');
 
 const definePlugin = new webpack.DefinePlugin({
   'process.env.NODE_ENV': '"production"',

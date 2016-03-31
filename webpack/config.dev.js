@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const baseConfig = require('./_config.base');
-const APP_DIR = path.join(__dirname, '..', 'app');
+const APP_DIR = path.join(__dirname, '..', 'src/app');
 
 // Do not parse react
 const nodeModulesDir = path.join(__dirname, '..', 'node_modules');

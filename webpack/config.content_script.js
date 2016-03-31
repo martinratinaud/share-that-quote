@@ -1,6 +1,6 @@
 const path = require('path');
 const popupConfig = require('./config.popup');
-const APP_DIR = path.join(__dirname, '..', 'app');
+const APP_DIR = path.join(__dirname, '..', 'src/app');
 
 popupConfig.entry = [`${APP_DIR}/content_script.js`];
 
