@@ -85,6 +85,8 @@ function extractQuotes(html, lang) {
     quotes = Parser.parse(t.text(), DEFAULT_LANGUAGE, options);
   }
 
+  quotes = _.uniqBy(quotes, (quote) => quote.text);
+
   return postProcessQuotes(quotes);
 }
 
